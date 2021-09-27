@@ -16,6 +16,7 @@
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
+    --clr-grey: #445B44;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -44,8 +45,8 @@
 
 
 body {
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-grey);
+    color: var(--clr-light);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -59,6 +60,7 @@ section {
 img {
     display: block;
     max-width: 100%;
+
 }
 
 strong { font-weight: var(--fw-bold) }
@@ -119,11 +121,17 @@ h3 { font-size: var(--fs-h3) }
     font-size: var(--fs-h3);
 }
 
-.section__subtitle--intro,
-.section__subtitle--about,
-.section__subtitle--work {
+.section__subtitle--intro {
     background: var(--clr-accent);
-    padding: .25em 1em;
+    padding: .2em 12em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+.section__subtitle--about,.section__subtitle--education,
+.section__subtitle--work,.section__subtitle--blog {
+    background: var(--clr-accent);
+    padding: .2em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
 }
@@ -133,6 +141,8 @@ h3 { font-size: var(--fs-h3) }
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
 }
+
+
 
 /* header */
 
@@ -274,7 +284,7 @@ header {
     
     .intro__img {
         grid-area: img;
-        min-width: 250px;
+        min-width: 280px;
         position: relative;
         z-index: 2;
     }    
@@ -295,10 +305,11 @@ header {
 /*  My services section  */
 
 .my-services {
-    background-color: var(--clr-dark);
-    background-image: url(../);
+    background: var(--clr-dark);
+    /*background-color: var(--clr-dark); */
+    background-image: url(E:\Certificates and Documents\Projects\WEB\IMAGES\ROB3.jpg);
     background-size: cover;
-    /* background-blend-mode: multiply; */
+    background-blend-mode: multiply; 
     color: var(--clr-light);
     text-align: center;
 }
@@ -314,7 +325,7 @@ header {
     width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
+    background: var(--clr-dark);
     opacity: 0.25;
 }
 
@@ -341,13 +352,76 @@ header {
 }
 
 
+/*  My accomplishment section  */
+
+.my-accomplishment {
+    background: var(--clr-grey);
+    /*background-color: var(--clr-dark); */
+    background-image: url(E:\Certificates and Documents\Projects\WEB\IMAGES\ROB3.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--accomplishment {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.section__title--accomplishment::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-dark);
+    opacity: 0.25;
+}
+
+.accomplishment {
+    margin-bottom: 4em;
+}
+
+.accomplishment {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .accomplishment {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .accomplishment + .accomplishment {
+        margin-left: 2em;
+    }
+}
+
+/*  About section  */
 .about-me {
-    max-width: 1000px;
+    background-color: var(--clr-dark);
+    background-image: url(../);
+    background-size: cover;
+    /* background-blend-mode: multiply; */
+    color: var(--clr-light);
+    text-align: justify;
+}
+
+.about-me {
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .about-me__img {
     box-shadow: var(--bs);
+    max-width: 100%
+    
+
+    
 }
 
 @media (min-width: 600px) {
@@ -378,6 +452,7 @@ header {
     .about-me__img {
         grid-area: img;
         position: relative;
+        
         z-index: 2;
     }
 }
@@ -385,8 +460,8 @@ header {
 /* My Work */
 
 .my-work {
-    background-color: var(--clr-light);
-    color: var(--clr-dark);
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
     text-align: justify;    
 }
 
@@ -402,7 +477,7 @@ header {
 
 .portfolio__img {
     transition: 
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        transform 750ms cubic-bezier(.5, 0, .5, 0),
         opacity 250ms linear;
 }
 
@@ -417,7 +492,72 @@ header {
     opacity: .5;
 }
 
+/* My blog */
 
+.my-blog {
+    background-color: var(--clr-grey);
+    color: var(--clr-light);
+    text-align: justify;    
+}
+
+
+
+
+/*  education section  */
+.education-me {
+    background-color: var(--clr-grey);
+    background-image: url(../);
+    background-size: cover;
+    /* background-blend-mode: multiply; */
+    color: var(--clr-light);
+    text-align: justify;
+}
+
+.education-me {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.education-me__img {
+    box-shadow: var(--bs);
+    max-width: 100%
+    
+
+    
+}
+
+@media (min-width: 600px) {
+    .education-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+    
+    .section__subtitle--education {
+        grid-area: title;
+    }
+    
+    .section__subtitle--education {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+    
+    .education-me__img {
+        grid-area: img;
+        position: relative;
+        
+        z-index: 2;
+    }
+}
 /* footer */
 
 .footer {
@@ -470,10 +610,11 @@ header {
     padding: 0 2em 2em;
     max-width: 1000px;
     margin: 0 auto;
+    text-align: justify;
 }
 
 .portfolio-item-individual p {
-    max-width: 600px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
