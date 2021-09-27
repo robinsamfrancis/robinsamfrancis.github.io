@@ -408,7 +408,7 @@ header {
     background-size: cover;
     /* background-blend-mode: multiply; */
     color: var(--clr-light);
-    text-align: justify;
+    text-align: left;
 }
 
 .about-me {
@@ -462,7 +462,7 @@ header {
 .my-work {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    text-align: justify;    
+    text-align: left;    
 }
 
 .portfolio {
@@ -510,7 +510,7 @@ header {
     background-size: cover;
     /* background-blend-mode: multiply; */
     color: var(--clr-light);
-    text-align: justify;
+    text-align: left;
 }
 
 .education-me {
