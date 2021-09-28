@@ -271,7 +271,7 @@ header {
     display: inline-block;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 1000px) {
     .intro {
         display: grid;
         width: min-content;
