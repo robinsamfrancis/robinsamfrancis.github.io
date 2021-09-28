@@ -117,8 +117,9 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .section__subtitle {
-    margin: 10;
+    margin: 0;
     font-size: var(--fs-h3);
+
 }
 
 .section__subtitle--intro {
@@ -270,7 +271,7 @@ header {
     display: inline-block;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 100px) {
     .intro {
         display: grid;
         width: min-content;
