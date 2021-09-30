@@ -308,9 +308,9 @@ header {
 .my-services {
     background: var(--clr-dark);
     /*background-color: var(--clr-dark); */
-    background-image: url(E:\Certificates and Documents\Projects\WEB\IMAGES\ROB3.jpg);
+    background-image: url(../IMAGES/ACC21.jpg);
     background-size: cover;
-    background-blend-mode: multiply; 
+    background-blend-mode: multiply;
     color: var(--clr-light);
     text-align: center;
 }
@@ -358,7 +358,7 @@ header {
 .my-accomplishment {
     background: var(--clr-grey);
     /*background-color: var(--clr-dark); */
-    background-image: url(E:\Certificates and Documents\Projects\WEB\IMAGES\ROB3.jpg);
+    background-image: url(../IMAGES/.jpg);
     background-size: cover;
     background-blend-mode: multiply;
     color: var(--clr-light);
@@ -405,9 +405,9 @@ header {
 /*  About section  */
 .about-me {
     background-color: var(--clr-dark);
-    background-image: url(../);
+    background-image: url(../IMAGES/ABT6.jpg);
     background-size: cover;
-    /* background-blend-mode: multiply; */
+    background-blend-mode: multiply;
     color: var(--clr-light);
     text-align: left;
 }
@@ -507,9 +507,9 @@ header {
 /*  education section  */
 .education-me {
     background-color: var(--clr-grey);
-    background-image: url(../);
+    background-image: url(../IMAGES/.jpg);
     background-size: cover;
-    /* background-blend-mode: multiply; */
+    background-blend-mode: multiply;
     color: var(--clr-light);
     text-align: left;
 }
@@ -619,3 +619,39 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+
+/*  Experience section  */
+.experience-me {
+    background-color: var(--clr-dark);
+    background-image: url(../IMAGES/ROB2.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: left;
+}
+
+.experience-me {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.experience-me__img {
+    box-shadow: var(--bs);
+    max-width: 100%
+    
+
+    
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
